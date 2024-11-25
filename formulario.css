@@ -1,0 +1,222 @@
+/* Todos os elementos da página */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Elementos com o ID "titulo" */
+#titulo {
+    font-family: sans-serif;
+    color: #380B61;
+    margin-left: 7%;
+} 
+
+
+/* Elementos com o ID "subtitulo" */
+#subtitulo {
+    font-family: sans-serif;
+    color: #380B61;
+    margin-left: 10%;
+} 
+
+#check{
+    display: inline-block;
+}
+
+/* Elementos de tag <fieldset>*/
+fieldset {
+    border: 0;
+}
+
+/* Elemento de tag <body> */
+body {
+    background-color: #F0F8FF;
+    font-family: sans-serif;
+    font-size: 1em;
+    color: #59429d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Alinha os elementos no topo */
+    height: 100vh;
+    margin: 0;
+    padding-top: 0; /* Remove qualquer padding superior */
+}
+
+/* Elementos de tags <body>, <input>, <Select>, <textarea> e <button> */
+input, select, textarea, button {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: #59429d;
+    border-radius: 5px;
+}
+
+
+/* Elementos de classe "grupo" nos estados das pseudoclasses "before" e "after" */
+.grupo:before, .grupo:after {
+    display: table;
+}
+
+/* Elementos de tag <h1> */
+h1 {
+    white-space: nowrap;
+}
+
+/* Elementos de classe "grupo" no estado da pseudoclasse "after" */
+.grupo:after {
+    clear: both;
+}
+
+/* Elementos de classe "campo" */
+.campo {
+    margin-bottom: 1em;
+}
+
+/* Elementos de classe "campo" de tag <label> */
+.campo label {
+    margin-bottom: 0.2em;
+    color: #59429d;
+    display: block;
+}
+
+/* Elementos de classe "campo" ou "grupo" de tag <fieldset> */
+fieldset.grupo .campo {
+    float:  left;
+    margin-right: 1em;
+}
+
+/* Elementos de classe "campo" das tags <input> com atributo text e email, da tag <select> e da tag <textarea>*/
+.campo input[type="text"], .campo input[type="email"], .campo select, .campo textarea {
+    padding: 0.2em;
+    border: 1px solid #59429d;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    display: block;
+}
+
+/* Elementos de classe "campo" de tag <select> e <option>*/
+.campo select option {
+    padding-right: 1em;
+}
+
+/* Elemento de classe "campo" com tag <input>, <select> e <textarea> todas com estado da pseudoclasse "focus"*/
+.campo input:focus, .campo select:focus, .campo textarea:focus {
+    background: #E0E0F8;
+}
+
+/* Elemento de classe "botao" */
+.botao {
+    font-size: 1.2em;
+    background: #59429d;
+    border: 0;
+    margin-bottom: 1em;
+    color: #ffffff;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    position: relative; /* Alterado de absolute para relative */
+    display: inline-block; /* Garante que os botões fiquem em linha */
+    margin-right: 10px; /* Adiciona espaço entre os botões */
+}
+
+/* Elemento de classe "botao" com o estado da pseudoclasse "hover" */
+.botao:hover {
+    background: #CCBBFF;
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: none;
+}
+
+/* Elementos de classe botão e de tag <select> */
+.botao, select{
+    cursor: pointer;
+}
+
+.error{
+    color: white;
+    background-color: red;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: block;
+
+}
+
+/* Estilo para as tabelas */
+table {
+    border-collapse: collapse; /* Remove espaços entre as bordas das células */
+    width: 90%; /* Faz a tabela ocupar 90% da largura disponível */
+    margin: 20px auto; /* Adiciona uma margem ao redor da tabela e centraliza */
+}
+
+/* Estilo para as células da tabela */
+table th, table td {
+    padding: 10px; /* Adiciona espaço dentro das células */
+    border: 1px solid #59429d; /* Adiciona uma borda nas células */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Estilo para as linhas da tabela */
+table tr {
+    border-bottom: 1px solid #59429d; /* Adiciona uma linha separando as linhas da tabela */
+}
+
+/* Estilo para o cabeçalho da tabela */
+table thead {
+    background-color: #59429d; /* Define a cor de fundo do cabeçalho */
+    color: #FFFFFF; /* Define a cor do texto do cabeçalho */
+}
+
+/* Estilo para as linhas zebradas da tabela */
+table tbody tr:nth-child(odd) {
+    background-color: #F0F8FF; /* Define a cor de fundo para as linhas ímpares */
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #FFFFFF; /* Define a cor de fundo para as linhas pares */
+}
+
+/* Estilo para o contêiner do botão */
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 90%; /* Alinha com a largura da tabela */
+    margin: 20px auto; /* Adiciona uma margem ao redor do contêiner e centraliza */
+}
+
+/* Estilo para o contêiner do botão */
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 90%; /* Alinha com a largura da tabela */
+    margin: 0 auto 20px auto; /* Adiciona uma margem ao redor do contêiner e centraliza */
+}
+
+/* Estilo para o botão de criar */
+.create-button {
+    background-color: #59429d;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+/* Estilo para os botões de editar e excluir */
+button {
+    background-color: #59429d;
+    color: #FFFFFF;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-right: 5px;
+}
+
+button:hover {
+    background-color: #3e2a7e;
+}
