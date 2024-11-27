@@ -19,6 +19,7 @@ function getDb(): mysqli{
                          $dbConfig['username'],
                          $dbConfig['password'], 
                          $dbConfig['database']);
+
  
          
     } catch (Exception $e){
